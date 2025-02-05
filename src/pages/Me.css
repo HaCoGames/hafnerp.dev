@@ -16,7 +16,7 @@
 }
 
 .me-inner-container h1 {
-    font-size: 4vh;
+    font-size: 5vh;
     text-align: center;
     width: 100%;
     margin-bottom: 2vh;
@@ -34,11 +34,14 @@
     height: 20vh;
     object-fit: cover;
     margin-right: 5vh;
-    border-radius: 20%;
 }
 
 .me-bullet-list-container {
     flex-grow: 1;
     width: 70%;
     padding-top: 2vh;
+}
+
+.me-about-me {
+    width: 100%;
 }

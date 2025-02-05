@@ -1,4 +1,3 @@
-import React from 'react'
 import './Me.css'
 
 export default function Me() {
@@ -11,7 +10,7 @@ export default function Me() {
           <img 
             src='/favicon.png' 
             alt='Image of Peter Hafner' 
-            className='me-image'
+            className='me-image ml-3 rounded-[15px] border-2 dark:border-white'
           />
 
           <div className='me-bullet-list-container'>
@@ -25,6 +24,25 @@ export default function Me() {
             </ol>
           </div>
         </div>
+
+        <h1 className='mt-5 border-b'></h1>
+
+        <div className='me-about-me'>
+            <b>About me: </b> 
+            <p>
+              I currently am a student at HTL-Villach. 
+              I am studying Computer Science with main focus areas being 'NSCS' - Network-Systems and Cybersecurity, 
+              'DSAI' - Data Science and Artificial Intelligence, Webdesign, Mobile computing (Such as Android apps or React native, pwa.) 
+              and Java applications. In addition I have knowledge in Software development methods, such as SCRUM. My private and main focus is
+              in the cloud and OS area. Nevertheless, I am a fully qualified fullstack developer. 
+            </p>
+            <p className='pt-3'>
+              In my free time I complete private projects and I am trying to learn something new every day!
+            </p>
+            <p className='pt-3'>
+              I really like Coffee!
+            </p>
+          </div>
       </div>
     </div>
   )
