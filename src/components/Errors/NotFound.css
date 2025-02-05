@@ -1,0 +1,20 @@
+.container-error {
+    height: 100%;
+
+    display: grid;
+    place-items: center;
+}
+
+.container-content-error {
+    margin-top: 30vh;
+}
+
+.container-content-error h1 {
+    font-size: 100px;
+}
+
+.line-404 {
+    margin-bottom: 1vh;
+    border-bottom: solid white 2vh;
+    width: 60vh;
+}

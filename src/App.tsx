@@ -1,10 +1,19 @@
-import { DarkThemeToggle } from "flowbite-react";
+import TopNavBar from "./components/TopNavBar/TopNavBar";
+
+import './App.css'
+import { Outlet } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <main className="flex min-h-screen items-center justify-center gap-2 dark:bg-gray-800">
-      <h1 className="text-2xl dark:text-white">Flowbite React + Vite</h1>
-      <DarkThemeToggle />
+    <main className="dark:bg-slate-950 dark:bg-opacity-85">
+      <div className="div-main">
+        <TopNavBar />
+        <Outlet />
+      </div>
+      <div className="app-footer border-t-2 border-b-neutral-300 dark:border-b-white dark:bg-black dark:bg-opacity-30">
+        <Footer />
+      </div>
     </main>
   );
 }

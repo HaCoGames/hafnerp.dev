@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-hafny-black {
+    background-color: #0E131F;
+}
+
+.bg-hafny-blue {
+    background-color: #38405F;
+}
+
+.bg-hafny-violet {
+    background-color: #59546C;
+}
+
+.bg-hafny-gray {
+    background-color: #8B939C;
+}
+
+.bg-hafny-red {
+    background-color: #FF0035;
+}
