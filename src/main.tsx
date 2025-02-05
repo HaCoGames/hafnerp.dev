@@ -7,6 +7,7 @@ import "flowbyte";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NotFound from "./components/Errors/NotFound.tsx";
 import Me from "./pages/Me.tsx";
+import Socials from "./pages/Socials/Socials.tsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/404',
         element: <NotFound />
+      },
+      {
+        path: '/social',
+        element: <Socials />
       }
     ]
   }, 
