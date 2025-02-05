@@ -11,7 +11,7 @@ function App() {
         <TopNavBar />
         <Outlet />
       </div>
-      <div className="app-footer border-t-2 border-b-neutral-300 dark:border-b-white dark:bg-black dark:bg-opacity-30">
+      <div className="app-footer bg-slate-500 border-t-2 border-b-neutral-300 dark:border-b-white dark:bg-black dark:bg-opacity-30">
         <Footer />
       </div>
     </main>
