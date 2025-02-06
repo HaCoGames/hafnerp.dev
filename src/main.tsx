@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NotFound from "./components/Errors/NotFound.tsx";
 import Me from "./pages/Me.tsx";
 import Socials from "./pages/Socials/Socials.tsx";
+import ContactPage from "./pages/Contact/ContactPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: '/social',
         element: <Socials />
+      },
+      {
+        path: '/contact',
+        element: <ContactPage />
       }
     ]
   }, 
