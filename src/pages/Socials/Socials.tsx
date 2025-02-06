@@ -7,7 +7,7 @@ export default function Socials() {
     <div className='me-container dark:text-white'>
       <div className='me-inner-container'>
         <h1 className='mb-3 w-full border-b dark:text-white'>Socials</h1>
-        <div className='grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3'>
+        <div className='mb-[20vh] grid grid-cols-1 gap-3 p-4 sm:grid-cols-2 md:grid-cols-3'>
           <Card href="https://www.gitlab.com/HafnerPeter_" className="max-w-sm">
             <div className="socials-title">
               <svg className='mt-1' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 24" height="24" width="25" role="img" aria-hidden="true">
@@ -34,7 +34,7 @@ export default function Socials() {
               This is barely used. Only for some side projects.
             </p>
           </Card>
-          
+
           <Card href='https://www.linkedin.com/in/peter-hafner-6b6998261/' className='max-w-sm'>
             <div className='socials-title'>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="30" height="30" focusable="false">
@@ -70,6 +70,18 @@ export default function Socials() {
             </div>
             <p>
               Wanna buy a coffee for a student?
+            </p>
+          </Card>
+
+          <Card href='https://x.com/PeterHafner20?t=G9DMUugevxtRRr8rqRPyNQ&s=09' className='max-w-sm'>
+            <div className='socials-title'>
+              <svg width="30" height="30" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="black"/>
+              </svg>
+              <h2 className='ml-5 text-2xl'>PeterHafner20</h2>
+            </div>
+            <p>
+              Let's connect on X.
             </p>
           </Card>
         </div>
