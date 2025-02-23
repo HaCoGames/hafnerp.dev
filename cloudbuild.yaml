@@ -1,9 +1,9 @@
 steps:
   - name: 'node:22-alpine'
     dir: 'client'
+    entrypoint: 'sh'
     args:
-      - 'npm install'
-      - 'npm run build'
+      - 'npm install && npm run build'
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA', '.']
