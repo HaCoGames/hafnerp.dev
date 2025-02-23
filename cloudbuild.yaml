@@ -7,10 +7,9 @@ steps:
       - 'npm install && npm run build'
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/hafnerp-dev:$COMMIT_SHA', '.']
-
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/$PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA']
+    args: 
+      - 'build -t gcr.io/$PROJECT_ID/hafnerp-dev:$COMMIT_SHA .'
+      - 'push gcr.io/$PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA'
 
 options:
   logging: CLOUD_LOGGING_ONLY
