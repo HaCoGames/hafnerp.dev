@@ -6,8 +6,12 @@ steps:
       - '-c'
       - 'npm install && npm run build'
 
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['login', '-u', 'oauth2accesstoken', '-p', '$(gcloud auth print-access-token)', '$_REGION-docker.pkg.dev']
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: bash
+    args:
+      - "-c"
+      - |
+        gcloud auth configure-docker $_REGION-docker.pkg.dev
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', '$_REGION-docker.pkg.dev/$PROJECT_ID/$_REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA', '.']
