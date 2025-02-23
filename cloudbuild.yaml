@@ -7,15 +7,17 @@ steps:
       - 'npm install && npm run build'
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['login', '-u', 'oauth2accesstoken', '-p', '$(gcloud auth print-access-token)', 'gcr.io']
+    args: ['login', '-u', 'oauth2accesstoken', '-p', '$(gcloud auth print-access-token)', '$_REGION-docker.pkg.dev']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA', '.']
+    args: ['build', '-t', '$_REGION-docker.pkg.dev/$PROJECT_ID/$_REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/$PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA']
+    args: ['push', '$_REGION-docker.pkg.dev/$PROJECT_ID/$_REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA']
 
 substitutions:
+  _REGION: 'europe-west3'
+  _REPO_NAME: 'hafnerp-dev'
   _SERVICE_NAME: 'hafnerp-dev'
 
 options:
