@@ -3,6 +3,7 @@ steps:
     dir: 'client'
     entrypoint: 'sh'
     args:
+      - '-c'
       - 'npm install && npm run build'
 
   - name: 'gcr.io/cloud-builders/docker'
