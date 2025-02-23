@@ -1,0 +1,10 @@
+node_modules 
+
+*.md 
+eslint.config.mjs
+
+client
+!client/dist
+
+docker
+Dockerfile
