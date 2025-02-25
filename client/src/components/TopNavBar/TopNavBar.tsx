@@ -5,10 +5,10 @@ export default function TopNavBar() {
   const navigate = useNavigate();
 
   return (
-    <Navbar fluid className="w-full  border-b-2 border-b-neutral-300 dark:border-b-white  dark:bg-black dark:bg-opacity-30">
+    <Navbar fluid className="w-full border-b border-b-neutral-300 dark:border-b-white dark:bg-gray-600">
       <NavbarBrand onClick={() => navigate('/')}>
         <img src="/favicon.png" style={{height: '4vh', width: '4vh', border: 'solid black 1px', borderRadius: '50%'}}></img>
-        <span className="pl-5 pr-2 self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+        <span className="pl-5 pr-2 self-center whitespace-nowrap text-xl dark:text-white">
           hafnerp.dev
         </span>
         <span className="dark:text-white">

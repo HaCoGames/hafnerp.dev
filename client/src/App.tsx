@@ -6,12 +6,12 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <main className="dark:bg-slate-950 dark:bg-opacity-85">
+    <main className="dark:bg-gray-800">
       <div className="div-main">
         <TopNavBar />
         <Outlet />
       </div>
-      <div className="app-footer bg-slate-500 border-t-2 border-b-neutral-300 dark:border-b-white dark:bg-black dark:bg-opacity-30">
+      <div className="app-footer border-t text-black">
         <Footer />
       </div>
     </main>
