@@ -1,0 +1,28 @@
+steps:
+  - name: 'node:22-alpine'
+    dir: 'client'
+    entrypoint: 'sh'
+    args:
+      - '-c'
+      - 'npm install && npm run build'
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: bash
+    args:
+      - "-c"
+      - |
+        gcloud auth configure-docker $_REGION-docker.pkg.dev
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', '$_REGION-docker.pkg.dev/$PROJECT_ID/$_REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA', '.']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', '$_REGION-docker.pkg.dev/$PROJECT_ID/$_REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA']
+
+substitutions:
+  _REGION: 'europe-west3'
+  _REPO_NAME: 'hafnerp-dev'
+  _SERVICE_NAME: 'hafnerp-dev'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
