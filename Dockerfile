@@ -17,4 +17,4 @@ COPY . .
 
 RUN npm run build 
 
-CMD ["serve", "-s", "-l", "4200", "./build"]
+CMD ["serve", "-s", "-l", "4200", "./dist"]
