@@ -31,7 +31,7 @@ export default function ContactPage() {
     <div className='me-container'>
       <div className="me-inner-container">
         <h1 className="mb-3 border-b dark:text-white">Contact Me</h1>
-        <form onSubmit={handleSubmit} className="mt-4 w-[700px] space-y-3">
+        <form onSubmit={handleSubmit} className="mt-4 w-[90%] max-w-[700px] space-y-3">
           <TextInput
             type="text"
             name="name"
